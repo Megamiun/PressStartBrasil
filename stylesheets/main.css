@@ -1,0 +1,59 @@
+@font-faces {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'Bebas Neue';
+	src: url('../fonts/bebas-neue.woff') format('woff');
+}
+
+body {
+    margin: 0;
+    font-family: 'DejaVu Sans';
+    font-size: 18px;
+}
+
+img {
+	display: block;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Bebas Neue';
+	font-size: 36px;
+	margin-top: 15vh;
+	margin-bottom: 0px;
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Bebas Neue';
+	font-size: 24px;
+}
+
+footer {
+	background-color: black;
+	text-align: center;
+	color: white;
+	padding: 10vh 10vw;
+}
+
+section {
+	display: block;
+	background-color: white;
+}
+
+section .text {
+	text-align: justify;
+	line-height: 1.5;
+	margin: 10vh 25vw;
+	size: 16px;
+}
+
+.title {
+    background-image: url("../img/placeholder.jpeg"); /* Temporário */
+    background-size: cover; /* Temporário */
+    height: 100vh;
+}
+
+.abstract {
+}
