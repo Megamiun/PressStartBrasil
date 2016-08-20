@@ -1,19 +1,27 @@
-@font-faces {
-	font-family: 'Bebas Neue';
-	src: url(fonts/BebasNeue Bold.ttf) format('truetype');
-	font-weight: bold;
+@font-face {
+	font-family: 'bebas_neuebold';
+	src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
+		 url('../fonts/bebasneue_bold-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
-@font-faces {
-	font-family: 'Bebas Neue';
-	src: url(fonts/BebasNeue Regular.ttf) format('truetype');
-	font-weight: normal;
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 body {
-    margin: 0;
-    font-family: 'DejaVu Sans';
-    font-size: 18px;
+	margin: 0;
+	font-family: 'DejaVu Sans';
+	font-size: 18px;
 }
 
 img {
@@ -23,16 +31,15 @@ img {
 
 h1 {
 	text-align: center;
-	font-family: 'Bebas Neue';
+	font-family: 'bebas_neuebold';
 	font-weight: bold;
-	font-size: 36px;
-	margin-top: 15vh;
+	font-size: 48px;
 	margin-bottom: 0px;
 }
 
 h2 {
 	text-align: center;
-	font-family: 'Bebas Neue';
+	font-family: 'bebas_neuebold';
 	font-weight: bold;
 	font-size: 24px;
 }
@@ -46,11 +53,12 @@ footer {
 
 nav {
 	font-weight: bold;
-	font-family: 'Bebas Neue';
+	font-family: 'bebas_neuebold';
 	background-color: white;
 	text-align: right;
 	position: fixed;
 	width: 100vw;
+	z-index: 10;
 }
 
 nav div {
@@ -65,21 +73,24 @@ nav div a {
 
 section {
 	display: block;
+	margin: 10vh 0;
+	text-align: center;
 	background-color: white;
 }
 
-section .text {
+section div {
 	text-align: justify;
 	line-height: 1.5;
-	margin: 10vh 25vw;
+	margin: 5vh 25vw;
 	size: 16px;
 }
 
-.title {
-    background-image: url("../img/placeholder.jpeg"); /* Temporário */
-    background-color: black;
-    background-size: cover; /* Temporário */
-    height: 100vh;
+.title-holder {
+	background-image: url("../img/placeholder.jpeg"); /* Temporário */
+	background-color: black;
+	background-size: cover; /* Temporário */
+	height: 100vh;
+	margin-top: 0;
 }
 
 .abstract {
@@ -87,4 +98,30 @@ section .text {
 
 .contact {
 	background-color: black;	
+}
+
+#logo {
+	position: relative;
+	height: 60vh;
+	width: auto;
+	top: 10vh;
+}
+
+#title {
+	position: relative;
+	height: 30vh;
+	width: auto;
+	left: 8vh;
+	top: 3vh;
+}
+
+#start {
+	-webkit-animation: blink 1s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation: blink 1s;
+	-moz-animation-iteration-count: infinite;
+	position: relative;
+	height: 8vh;
+	width: auto;
+	top: -4vh;
 }
