@@ -1,8 +1,13 @@
 @font-faces {
-	font-weight: normal;
-	font-style: normal;
 	font-family: 'Bebas Neue';
-	src: url('../fonts/bebas-neue.woff') format('woff');
+	src: url(fonts/BebasNeue Bold.ttf) format('truetype');
+	font-weight: bold;
+}
+
+@font-faces {
+	font-family: 'Bebas Neue';
+	src: url(fonts/BebasNeue Regular.ttf) format('truetype');
+	font-weight: normal;
 }
 
 body {
@@ -19,6 +24,7 @@ img {
 h1 {
 	text-align: center;
 	font-family: 'Bebas Neue';
+	font-weight: bold;
 	font-size: 36px;
 	margin-top: 15vh;
 	margin-bottom: 0px;
@@ -27,6 +33,7 @@ h1 {
 h2 {
 	text-align: center;
 	font-family: 'Bebas Neue';
+	font-weight: bold;
 	font-size: 24px;
 }
 
@@ -35,6 +42,25 @@ footer {
 	text-align: center;
 	color: white;
 	padding: 10vh 10vw;
+}
+
+nav {
+	font-weight: bold;
+	font-family: 'Bebas Neue';
+	background-color: white;
+	text-align: right;
+	position: fixed;
+	width: 100vw;
+}
+
+nav div {
+	margin: 3vh 3vw;
+}
+
+nav div a {
+	text-decoration: none;
+	margin: 0 1.5vw;
+	color: black;
 }
 
 section {
@@ -51,9 +77,14 @@ section .text {
 
 .title {
     background-image: url("../img/placeholder.jpeg"); /* Temporário */
+    background-color: black;
     background-size: cover; /* Temporário */
     height: 100vh;
 }
 
 .abstract {
+}
+
+.contact {
+	background-color: black;	
 }
