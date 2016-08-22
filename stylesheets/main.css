@@ -1,11 +1,3 @@
-@font-face {
-	font-family: 'bebas_neuebold';
-	src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
-		 url('../fonts/bebasneue_bold-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
 @keyframes blink {
 	0% {
 		opacity: 1;
@@ -87,10 +79,14 @@ section div {
 
 .title-holder {
 	background-image: url("../img/placeholder.jpeg"); /* Temporário */
-	background-color: black;
 	background-size: cover; /* Temporário */
 	height: 100vh;
 	margin-top: 0;
+}
+
+.title-holder div {
+	display: block;
+	margin: 0;
 }
 
 .abstract {
@@ -101,18 +97,12 @@ section div {
 }
 
 #logo {
-	position: relative;
-	height: 60vh;
-	width: auto;
-	top: 10vh;
+	max-height: 60vh;
+	padding-top: 10vh;
 }
 
 #title {
-	position: relative;
-	height: 30vh;
-	width: auto;
-	left: 8vh;
-	top: 3vh;
+	max-height: 16vh;
 }
 
 #start {
@@ -120,8 +110,10 @@ section div {
 	-webkit-animation-iteration-count: infinite;
 	-moz-animation: blink 1s;
 	-moz-animation-iteration-count: infinite;
-	position: relative;
-	height: 8vh;
-	width: auto;
-	top: -4vh;
+	max-height: 8vh;
+}
+
+#logo img, #title img, #start img {
+	max-height: inherit;
+	max-width: 100vw;
 }
