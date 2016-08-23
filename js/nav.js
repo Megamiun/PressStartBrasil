@@ -2,11 +2,11 @@
 
 var lastScrollTop = 0;
 var didScroll = false;
-var delta = 5; 
+const delta = 5; 
 
 /* Added so jquery will not queue animations and continue moving even after the person stopped scrolling */
 var moving = false; 
-var nav = $('nav');
+const nav = $('nav');
 
 /* Add event to scroll function of window to say that the window was scrolled */
 $(window).scroll(function (event) {
@@ -22,13 +22,13 @@ setInterval(function() {
 }, 300);
 
 function hasScrolled() {
-	var st = $(this).scrollTop();
+	const st = $(this).scrollTop();
 
 	if (Math.abs(lastScrollTop - st) <= delta)
 		return;
 
 	moving = true;
-	var navbarHeight = nav.outerHeight();
+	const navbarHeight = nav.outerHeight();
 	
 	if (st > lastScrollTop && st > navbarHeight){
 		moveNav(-navbarHeight);

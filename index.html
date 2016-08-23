@@ -56,30 +56,36 @@
 		</section>
 
 		<section class="video" >
-			<iframe width="640" height="360" src="https://www.youtube.com/embed/3zEeJ2X0uFg" frameborder="0" allowfullscreen></iframe>
+			<div class="videoWrapper">
+				<div>
+					<iframe src="https://www.youtube.com/embed/3zEeJ2X0uFg" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
 		</section>
 
-		<section class="carousel" >
-		    <article class="slide">
-		    	<h3>Emulador em Celular</h3>
-				<img src="img/emulator.jpg" >
-		    </article>
-		    <article class="slide">
-		    	<h3>Xbox</h3>
-				<img src="img/xbox.jpeg" >
-		    </article>
-		    <article class="slide">
-		    	<h3>VR</h3>
-				<img src="img/vr.jpeg" >
-		    </article>
+		<section class="carousel">
+			<div class="carouselContainer">
+			    <article class="slide">
+			    	<h3>Emulador em Celular</h3>
+					<img src="img/emulator.jpg" >
+			    </article>
+			    <article class="slide">
+			    	<h3>Xbox</h3>
+					<img src="img/xbox.jpeg" >
+			    </article>
+			    <article class="slide">
+			    	<h3>VR</h3>
+					<img src="img/vr.jpeg" >
+			    </article>
 
-			<a class="prev" onclick="previous()">&#10094;</a>
-			<a class="next" onclick="next()">&#10095;</a>
+				<a class="prev" onclick="previous()">&#10094;</a>
+				<a class="next" onclick="next()">&#10095;</a>
 
-			<div class="dot-container">
-				<span class="dot" onclick="showSlide(0)"></span>
-				<span class="dot" onclick="showSlide(1)"></span>
-				<span class="dot" onclick="showSlide(2)"></span>
+				<div class="dot-container">
+					<span class="dot" onclick="showSlide(0)"></span>
+					<span class="dot" onclick="showSlide(1)"></span>
+					<span class="dot" onclick="showSlide(2)"></span>
+				</div>
 			</div>
 		</section>
 
