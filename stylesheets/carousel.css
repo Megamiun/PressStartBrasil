@@ -1,42 +1,38 @@
  /* Slideshow container */
 .carousel {
-    height: 60vh;
+    height: 70vh;
 }
 
 .carousel .carouselContainer {
     height: inherit;
     overflow: hidden;
     position: relative;
-} 
-
-.carousel div {
-    margin: 0;    
-} 
-
-.carousel img {
-    height: auto;
-    width: inherit;
 }
 
-.carousel .slide {
-    max-height: inherit;
-    max-width: inherit;
-    display: none;
+.carousel div {
     margin: 0;
 }
 
-.carousel .slide.active {
-    display: inline;
+.carousel img {
+    position: absolute;
+    height: auto;
+    width: 100vw;
+    bottom:-100%;
+    top:-100%;
+    right: 0;
+    left: 0;
 }
 
-.slide h3 {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
+.carousel .slide {
+    display: none;
+}
+
+.carousel .slide.active {
+    vertical-align: middle;
+    max-width: inherit;
+    height: inherit;
+    display: inline;
+    margin: 0;
 }
 
 /* Next & previous buttons */
@@ -55,12 +51,10 @@
 
 .prev {
     left: 0;
-    border-radius: 3px 0 0 3px;
 }
 
 .next {
 	right: 0;
-	border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */

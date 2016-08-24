@@ -19,7 +19,7 @@ function showSlides(n) {
 	var slides = document.getElementsByClassName("slide");
 	var dots = document.getElementsByClassName("dot");
 
-	slideIndex = n % slides.length;
+	slideIndex = mod(n, slides.length);
 	for (i = 0; i < slides.length; i++) {
         slides[i].className = slides[i].className.replace(" active", "");
         dots[i].className = dots[i].className.replace(" active", "");
@@ -27,4 +27,8 @@ function showSlides(n) {
 
 	slides[slideIndex].className += " active";
 	dots[slideIndex].className += " active";
+}
+
+function mod(dividend, divisor){
+	return ((dividend % divisor) + divisor) % divisor;
 }
