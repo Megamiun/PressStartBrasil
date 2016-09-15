@@ -1,7 +1,28 @@
 @font-face {
-	font-family: 'bebas_neuebold';
-	src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
-		 url('../fonts/bebasneue_bold-webfont.woff') format('woff');
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeue Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeue Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeue Light.ttf') format('truetype');
+	font-weight: lighter;
+	font-style: normal;
+}
+
+/* Procurar como deixar isso dentro da font-family Bebas Neue */
+@font-face {
+	font-family: 'Bebas Neue Regular';
+	src: url('../fonts/BebasNeue Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }

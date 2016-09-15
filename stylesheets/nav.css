@@ -1,0 +1,64 @@
+nav {
+	font-family: 'Bebas Neue';
+	background-color: white;
+	position: fixed;
+	z-index: 10;
+}
+
+nav div {
+	margin: 2vh 2vw;
+}
+
+nav a {
+	text-decoration: none;
+	margin: 0 1.5vw;
+	color: black;
+}
+
+nav.horizontal {
+	text-align: right;
+	width: 100%;
+}
+
+nav.horizontal a {
+	font-family: 'Bebas Neue Regular';
+	font-weight: normal;
+}
+
+nav.vertical {
+	height: 100%;
+	width: 20%;
+}
+
+nav.vertical * {
+	display: block;
+}
+
+nav.vertical div {
+	border-bottom: 1px solid black;
+	display: block;
+}
+
+nav.vertical div a {
+	font-weight: lighter;
+}
+
+nav.vertical div > :first-child {
+	font-family: 'Bebas Neue Regular';
+	font-weight: normal;
+	display: block;
+}
+
+#nav-burger {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	left: 3vw;
+	top: 0;
+}
+
+#nav-burger .hamburger-box {
+	height: 100%;
+}

@@ -16,6 +16,10 @@ body {
 	font-size: 18px;
 }
 
+* {
+	max-width: 100%;
+}
+
 img {
 	display: block;
 	margin: auto;
@@ -23,7 +27,7 @@ img {
 
 h1 {
 	text-align: center;
-	font-family: 'bebas_neuebold';
+	font-family: 'Bebas Neue';
 	font-weight: bold;
 	font-size: 48px;
 	margin-bottom: 0px;
@@ -31,7 +35,7 @@ h1 {
 
 h2 {
 	text-align: center;
-	font-family: 'bebas_neuebold';
+	font-family: 'Bebas Neue';
 	font-weight: bold;
 	font-size: 24px;
 }
@@ -43,26 +47,6 @@ footer {
 	padding: 10vh 10vw;
 }
 
-nav {
-	font-weight: bold;
-	font-family: 'bebas_neuebold';
-	background-color: white;
-	text-align: right;
-	position: fixed;
-	width: 100vw;
-	z-index: 10;
-}
-
-nav div {
-	margin: 3vh 3vw;
-}
-
-nav div a {
-	text-decoration: none;
-	margin: 0 1.5vw;
-	color: black;
-}
-
 section {
 	display: block;
 	margin: 10vh 0;
@@ -70,27 +54,58 @@ section {
 	background-color: white;
 }
 
-section div {
+section div, section article {
+	display: inline-block;
 	text-align: justify;
 	line-height: 1.5;
-	margin: 5vh 25vw;
-	size: 16px;
+	margin: 5vh 0;
+	width: 55vw;
 }
 
 .title-holder {
-	background-image: url("../img/placeholder.jpeg"); /* Temporário */
-	background-size: cover; /* Temporário */
-	height: 100vh;
-	margin-top: 0;
-}
-
-.title-holder div {
-	display: block;
 	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	text-align: center;
 }
 
 .contact {
 	background-color: black;
+}
+
+.layered {
+	position: relative;
+}
+
+.layered > * {
+	left: 0;
+	right: 0;
+	margin: 0;
+	position: absolute;
+}
+
+.layer-10, .layer-10 *, .layer-10.override-previous-layer *, .layer-10.override-previous-layer {
+	z-index: 10;
+}
+
+.layer-9, .layer-9 *, .layer-9.override-previous-layer, *.layer-9.override-previous-layer {
+	z-index: 9;
+}
+
+.layer-8, .layer-8 *, .layer-8.override-previous-layer *, .layer-8.override-previous-layer {
+	z-index: 8;
+}
+
+.layer-2, .layer-2 *, .layer-2.override-previous-layer *, .layer-2.override-previous-layer {
+	z-index: 2;
+}
+
+.layer-1, .layer-1 *, .layer-1.override-previous-layer *, .layer-1.override-previous-layer {
+	z-index: 1;
+}
+
+.left-aligned {
+	text-align: left;
 }
 
 #logo {
@@ -110,7 +125,11 @@ section div {
 	max-height: 8vh;
 }
 
-#logo img, #title img, #start img {
-	max-height: inherit;
-	max-width: 100vw;
+#info {
+	width: inherit;
+}
+
+#info img {
+	max-width: 80vw;
+	margin: auto;
 }

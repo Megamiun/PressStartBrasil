@@ -1,34 +1,42 @@
-var slideIndex = 0;
-showSlides(slideIndex);
+var carousels = document.getElementsByClassName("carousel-container");
 
-function next(n) {
-	showSlides(slideIndex + 1);
+for (var index = 0; index < carousels.length; index++) {
+	showSlides(carousels[index], 0);
 }
 
-function previous(n) {
-	showSlides(slideIndex - 1);
+function next(carouselId, n) {
+	var carousel = getCarousel(carouselId);
+	showSlides(carousel, carousel.getAttribute('slideIndex') + 1);
 }
 
-function showSlide(n) {
-	showSlides(n);
+function previous(carouselId, n) {
+	var carousel = getCarousel(carouselId);
+	showSlides(carousel, carousel.getAttribute('slideIndex') - 1);
 }
 
-/* TODO: Verificar como esse método funciona com dois carousels na mesma página */
-function showSlides(n) {
-	var i;
-	var slides = document.getElementsByClassName("slide");
-	var dots = document.getElementsByClassName("dot");
+function showSlide(carouselId, n) {
+	showSlides(getCarousel(carouselId), n);
+}
+
+function showSlides(carousel, n) {
+	var slides = carousel.getElementsByClassName("slide");
+	var dots = carousel.getElementsByClassName("dot");
 
 	slideIndex = mod(n, slides.length);
-	for (i = 0; i < slides.length; i++) {
+	for (var i = 0; i < slides.length; i++) {
         slides[i].className = slides[i].className.replace(" active", "");
         dots[i].className = dots[i].className.replace(" active", "");
 	}
 
+	carousel.setAttribute("slideIndex", slideIndex);
 	slides[slideIndex].className += " active";
 	dots[slideIndex].className += " active";
 }
 
-function mod(dividend, divisor){
+function mod(dividend, divisor) {
 	return ((dividend % divisor) + divisor) % divisor;
+}
+
+function getCarousel(carouselId) {
+	return document.getElementById(carouselId);
 }
