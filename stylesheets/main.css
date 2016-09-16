@@ -59,7 +59,7 @@ section div, section article {
 	text-align: justify;
 	line-height: 1.5;
 	margin: 5vh 0;
-	width: 55vw;
+	width: 50vw;
 }
 
 .title-holder {
@@ -84,23 +84,19 @@ section div, section article {
 	position: absolute;
 }
 
-.layer-10, .layer-10 *, .layer-10.override-previous-layer *, .layer-10.override-previous-layer {
+.layer-10 {
 	z-index: 10;
 }
 
-.layer-9, .layer-9 *, .layer-9.override-previous-layer, *.layer-9.override-previous-layer {
+.layer-9 {
 	z-index: 9;
 }
 
-.layer-8, .layer-8 *, .layer-8.override-previous-layer *, .layer-8.override-previous-layer {
-	z-index: 8;
-}
-
-.layer-2, .layer-2 *, .layer-2.override-previous-layer *, .layer-2.override-previous-layer {
+.layer-2 {
 	z-index: 2;
 }
 
-.layer-1, .layer-1 *, .layer-1.override-previous-layer *, .layer-1.override-previous-layer {
+.layer-1 {
 	z-index: 1;
 }
 

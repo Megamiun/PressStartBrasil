@@ -27,8 +27,8 @@ nav.horizontal a {
 
 nav.vertical {
 	padding-top: 50px;
-	height: 100%;
-	width: 25%;
+	height: 100vh;
+	width: 22vw;
 }
 
 nav.vertical * {
@@ -62,4 +62,8 @@ nav.vertical div > :first-child {
 
 #nav-burger .hamburger-box {
 	height: 100%;
+}
+
+#nav-burger .hamburger-inner {
+	transition-duration: 0.3s;
 }

@@ -57,7 +57,7 @@ function toggleSidebar() {
 	var hamburgerSize = hamburger.outerWidth();
 	var hamburgerDistance = $(window).width() * 0.02;
 
-	var sideBarDuration = 200;
+	var sideBarDuration = 300;
 	var sidebarWidth = sideBar.outerWidth();
 
 	var hamburgerDelay = ((hamburgerDistance + hamburgerSize) / sidebarWidth) * sideBarDuration;
