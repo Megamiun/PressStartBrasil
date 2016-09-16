@@ -12,7 +12,8 @@ const nav = $('#top-bar');
 const sideBar = $('#side-bar');
 const hamburger = $('#nav-burger');
 
-sideBar.css('left', -sideBar.outerWidth());
+hideSidebar();
+window.addEventListener(resize, hideSidebar, false);
 
 /* Add event to scroll function of window to say that the window was scrolled */
 $(window).scroll(function (event) {
@@ -26,6 +27,10 @@ setInterval(function() {
 		didScroll = false;
 	}
 }, 300);
+
+function hideSidebar() {
+	if (!menuOpen) sideBar.css('left', -sideBar.outerWidth());
+}
 
 /* Verifies if there was a scrolling action since last movement */
 function hasScrolled() {
