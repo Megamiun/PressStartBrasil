@@ -18,7 +18,7 @@ $(window).scroll(function (event) {
 	didScroll = true;
 });
 
-/* Sets and event every 150ms that checks if the window was moveNavd */
+/* Sets and event every 150ms that checks if the window was moved */
 setInterval(function() {
 	if (!moving && didScroll) {
 		hasScrolled();
@@ -26,6 +26,7 @@ setInterval(function() {
 	}
 }, 300);
 
+/* Verifies if there was a scrolling action since last movement */
 function hasScrolled() {
 	const st = $(this).scrollTop();
 
@@ -44,18 +45,22 @@ function hasScrolled() {
 	lastScrollTop = st;
 }
 
+/* Moves the superior nav vertically */
 function moveNav(newTop) {
 	nav.animate({top: newTop}, 175, function() {
 		moving = false;
 	});
 }
 
+/* Turns the menu on and off */
 function toggleSidebar() {
-	var sidebarWidth = sideBar.outerWidth();
-	var hamburgerDistance = $(window).width() * 0.03;
+	var hamburgerSize = hamburger.outerWidth();
+	var hamburgerDistance = $(window).width() * 0.02;
 
 	var sideBarDuration = 200;
-	var hamburgerDelay = (hamburgerDistance / sidebarWidth) * sideBarDuration;
+	var sidebarWidth = sideBar.outerWidth();
+
+	var hamburgerDelay = ((hamburgerDistance + hamburgerSize) / sidebarWidth) * sideBarDuration;
 
 	var hamburgerDuration = sideBarDuration - hamburgerDelay;
 
@@ -64,8 +69,10 @@ function toggleSidebar() {
 		hamburger.animate({left: hamburgerDistance}, hamburgerDuration);
 		hamburger.removeClass(activeClass);
 	} else {
+		var leftDistance = sidebarWidth - (hamburgerDistance + hamburgerSize);
+
 		sideBar.animate({left: 0}, sideBarDuration);
-		hamburger.delay(hamburgerDelay).animate({left: sidebarWidth - hamburgerDistance}, hamburgerDuration);
+		hamburger.delay(hamburgerDelay).animate({left: leftDistance}, hamburgerDuration);
 		hamburger.addClass(activeClass);
 	}
 }
