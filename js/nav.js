@@ -7,6 +7,7 @@ const activeClass = 'is-active';
 
 /* Added so jquery will not queue animations and continue moving even after the person stopped scrolling */
 var moving = false;
+var menuOpen = false;
 const nav = $('#top-bar');
 const sideBar = $('#side-bar');
 const hamburger = $('#nav-burger');
@@ -15,12 +16,12 @@ sideBar.css('left', -sideBar.outerWidth());
 
 /* Add event to scroll function of window to say that the window was scrolled */
 $(window).scroll(function (event) {
-	didScroll = true;
+	didScroll = !menuOpen; // If menu is open, ignores event
 });
 
 /* Sets and event every 150ms that checks if the window was moved */
 setInterval(function() {
-	if (!moving && didScroll) {
+	if (!menuOpen && !moving && didScroll) {
 		hasScrolled();
 		didScroll = false;
 	}
@@ -54,25 +55,27 @@ function moveNav(newTop) {
 
 /* Turns the menu on and off */
 function toggleSidebar() {
-	var hamburgerSize = hamburger.outerWidth();
-	var hamburgerDistance = $(window).width() * 0.02;
+	const hamburgerSize = hamburger.outerWidth();
+	const hamburgerDistance = $(window).width() * 0.02;
 
-	var sideBarDuration = 300;
-	var sidebarWidth = sideBar.outerWidth();
+	const sideBarDuration = 300;
+	const sidebarWidth = sideBar.outerWidth();
 
-	var hamburgerDelay = ((hamburgerDistance + hamburgerSize) / sidebarWidth) * sideBarDuration;
+	const hamburgerDelay = ((hamburgerDistance + hamburgerSize) / sidebarWidth) * sideBarDuration;
 
-	var hamburgerDuration = sideBarDuration - hamburgerDelay;
+	const hamburgerDuration = sideBarDuration - hamburgerDelay;
 
 	if (hamburger.hasClass(activeClass)) {
 		sideBar.animate({left: -sidebarWidth}, sideBarDuration);
 		hamburger.animate({left: hamburgerDistance}, hamburgerDuration);
 		hamburger.removeClass(activeClass);
 	} else {
-		var leftDistance = sidebarWidth - (hamburgerDistance + hamburgerSize);
+		const leftDistance = sidebarWidth - (hamburgerDistance + hamburgerSize);
 
 		sideBar.animate({left: 0}, sideBarDuration);
 		hamburger.delay(hamburgerDelay).animate({left: leftDistance}, hamburgerDuration);
 		hamburger.addClass(activeClass);
 	}
+
+	menuOpen = hamburger.hasClass(activeClass);
 }
