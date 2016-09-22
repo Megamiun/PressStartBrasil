@@ -13,7 +13,7 @@ const sideBar = $('#side-bar');
 const hamburger = $('#nav-burger');
 
 hideSidebar();
-window.addEventListener(resize, hideSidebar, false);
+window.addEventListener('resize', hideSidebar, false);
 
 /* Add event to scroll function of window to say that the window was scrolled */
 $(window).scroll(function (event) {

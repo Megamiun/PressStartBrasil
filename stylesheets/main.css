@@ -50,19 +50,27 @@ footer {
 section {
 	display: block;
 	margin: 10vh 0;
+	min-height: 100vh;
 	text-align: center;
 	background-color: white;
+}
+
+section.textual {
+	min-height: 0vh;
 }
 
 section article {
 	display: inline-block;
 	text-align: justify;
-	line-height: 1.5;
-	margin: 5vh 0;
-	width: 50vw;
 }
 
-section article > img {
+section.textual article {
+	line-height: 1.5;
+	margin: 4vh 0;
+	width: 55vw;
+}
+
+section > img {
 	max-height: 100vh;
 	max-width: 50vw;
 	margin: 15vh auto;
