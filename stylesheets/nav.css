@@ -20,9 +20,9 @@ nav.horizontal {
 }
 
 nav.horizontal a {
-	font-family: 'Bebas Neue Regular';
+	font-family: 'Bebas Neue';
 	margin: 0 1.5vw;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 nav.vertical {
