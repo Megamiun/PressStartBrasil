@@ -81,8 +81,8 @@ section.image > img {
 	margin: auto;
 	height: auto;
 	width: 100vw;
-    bottom:0;
-    top:0;
+    bottom: 0;
+    top: 0;
 }
 
 section:not(.image) > img {
