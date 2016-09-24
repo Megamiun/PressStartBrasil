@@ -16,6 +16,5 @@
 
 video {
 	background-repeat: no-repeat;
-	width: 100%;
-	height: auto;
+	max-height: none;
 }

@@ -16,13 +16,8 @@ body {
 	font-size: 18px;
 }
 
-* {
+:not(img):not(video) {
 	max-width: 100%;
-}
-
-img {
-	display: block;
-	margin: auto;
 }
 
 h1 {
@@ -50,13 +45,16 @@ footer {
 section {
 	display: block;
 	margin: 10vh 0;
+	overflow: hidden;
 	min-height: 100vh;
+	max-height: 100vh;
 	text-align: center;
 	background-color: white;
 }
 
-section.textual {
-	min-height: 0vh;
+section.textual, section.textual * {
+	min-height: 0;
+	max-height: none;
 }
 
 section article {
@@ -70,28 +68,22 @@ section.textual article {
 	width: 55vw;
 }
 
-section.image {
+section.image, .carousel-container > .slide.active {
+    justify-content: center;
+	align-items: center;
 	position: relative;
-	max-height: 100vh;
-	overflow: hidden;
+    display: flex;
+	height: 100vh;
 }
 
-section.image > img {
-    position:absolute;
-	margin: auto;
-	height: auto;
-	width: 100vw;
-    bottom: 0;
-    top: 0;
-}
-
-section:not(.image) > img {
-	max-height: 100vh;
+/* Fix temporária até todas as imagens estarem bonitinhas */
+section:not(.image) img {
+	width: auto;
+	height: 100vh;
 }
 
 .title-holder {
 	margin: 0;
-	height: 100vh;
 	overflow: hidden;
 	text-align: center;
 }
@@ -153,6 +145,23 @@ section:not(.image) > img {
 }
 
 #info img {
-	max-width: 80vw;
+	width: auto;
+	height: auto;
 	margin: auto;
+	display: block;
+	max-width: 80vw;
+}
+
+@media all and (min-aspect-ratio:16/9) {
+	img, video {
+		height: auto;
+		width: 100vw;
+	}
+}
+
+@media all and (max-aspect-ratio:16/9) {
+	img, video {
+		height: 100vh;
+		width: auto;
+	}
 }
