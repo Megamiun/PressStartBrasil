@@ -77,7 +77,7 @@ section.image, .carousel-container > .slide.active {
 }
 
 /* Fix temporária até todas as imagens estarem bonitinhas */
-section:not(.image) img {
+:not(section.image, .carousel-container) img {
 	width: auto;
 	height: 100vh;
 }
