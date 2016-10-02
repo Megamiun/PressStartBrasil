@@ -62,9 +62,25 @@ nav.vertical div > :first-child {
 }
 
 #nav-burger .hamburger-box {
-	height: 100%;
+	width: 30px;
+	height: 40px;
 }
 
 #nav-burger .hamburger-inner {
 	transition-duration: 0.3s;
+}
+
+#nav-burger .hamburger-inner,
+#nav-burger .hamburger-inner::before,
+#nav-burger .hamburger-inner::after {
+	height: 3px;
+	width: 100%;
+}
+
+#nav-burger:not(.is-active) .hamburger-inner::before {
+	top: -7px;
+}
+
+#nav-burger:not(.is-active) .hamburger-inner::after {
+	bottom: -7px;
 }
