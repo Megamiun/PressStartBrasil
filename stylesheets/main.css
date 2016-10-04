@@ -45,7 +45,7 @@ section {
 	background-color: white;
 }
 
-section.textual, section.textual * {
+section.textual, section.textual *, section.videoWrapper {
 	min-height: 0;
 	max-height: none;
 }
