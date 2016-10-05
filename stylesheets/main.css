@@ -154,3 +154,16 @@ section.image, .carousel-container > .slide.active {
 		width: auto;
 	}
 }
+
+@media all and (max-aspect-ratio:16/9) {
+	img, video {
+		height: 100vh;
+		width: auto;
+	}
+}
+
+@media all and (max-width:50em) {
+	section.textual article {
+		width: 25em;
+	}
+}
