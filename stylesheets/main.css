@@ -162,8 +162,9 @@ section.image, .carousel-container > .slide.active {
 	}
 }
 
-@media all and (max-width:50em) {
+@media all and (max-width:40em) {
 	section.textual article {
-		width: 25em;
+		max-width: 80vw;
+		width: 20em;
 	}
 }
