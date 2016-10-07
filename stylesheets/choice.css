@@ -4,6 +4,11 @@
     width: 100px;
 }
 
+#nineties-button img, #zeroes-button img, #tens-button img {
+    height: inherit;
+    width: inherit;
+}
+
 #choose-your-destiny {
     max-height: 10%;
     max-width: 80%;

@@ -37,7 +37,7 @@ footer {
 
 section {
 	display: block;
-	margin: 10vh 0;
+	margin: 10vmin 0;
 	overflow: hidden;
 	min-height: 100vh;
 	max-height: 100vh;
@@ -57,7 +57,7 @@ section article {
 
 section.textual article {
 	line-height: 1.5;
-	margin: 4vh 0;
+	margin: 0;
 	width: 55vw;
 }
 
