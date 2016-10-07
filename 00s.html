@@ -19,14 +19,15 @@
 		<script src="js/nav.js" defer></script>
 	</head>
 	<body>
-		<nav id="top-bar" class="horizontal layer-10" >
+		<button id="nav-burger" class="hamburger hamburger--vortex layer-10"
+		type="button" onclick="toggleSidebar()">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+
+		<nav id="top-bar" class="horizontal layer-8" >
 			<div>
-				<button id="nav-burger" class="hamburger hamburger--vortex"
-				type="button" onclick="toggleSidebar()">
-				<span class="hamburger-box">
-					<span class="hamburger-inner"></span>
-				</span>
-				</button>
 				<a href="sobre.html">Sobre</a>
 				<a href="contato.html">Contato</a>
 			</div>
@@ -113,8 +114,26 @@
 				<p>O editorial era diferente, sem nenhum conteúdo de dicas e truques, indo contra a maré das revistas que o precederam. Havia também uma inovação em como se analisava os games, dividindo a análise por três redatores em cada jogo, trazendo assim diferentes pontos de vista sobre o mesmo game.</p>
 			</article>
 		</section>
-		<section class="image" ><img src="img/egm-e36-p70.png"/></section>
-		<section class="image" ><img src="img/egm-e36-p71.png"/></section>
+
+		<section>
+			<article id="re-carousel" class="carousel-container">
+				<article class="slide">
+					<img src="img/egm-e36-p70.png"/>
+				</article>
+				<article class="slide">
+					<img src="img/egm-e36-p71.png"/>
+				</article>
+
+				<a class="prev" onclick="previous('re-carousel')">&#10094;</a>
+				<a class="next" onclick="next('re-carousel')">&#10095;</a>
+
+				<div class="dot-container">
+					<span class="dot" onclick="showSlide('re-carousel', 0)"></span>
+					<span class="dot" onclick="showSlide('re-carousel', 1)"></span>
+				</div>
+			</article>
+		</section>
+
 		<section class="textual" >
 			<article>
 				<p>Outra característica, a dos mascotes e personagens das revistas, tais qual o Chefe na década anterior, agora eram substituídos por espiões e fofoqueiros. Quartemann, originário da própria publicação norte americana, existia para instigar os leitores com rumores quentinhos da indústria, que podiam ou não ser verdades. Disseminando assim uma cultura não só de esperar o que já tinha sido anunciado, mas o que poderia acontecer dali a alguns anos.</p>

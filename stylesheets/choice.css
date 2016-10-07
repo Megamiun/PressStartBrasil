@@ -39,19 +39,19 @@
     }
 }
 
-/* 69.28 é sqrt(3)/2 de 80, que é a proporção da altura de um triangulo quanto a seu tamanho */
+/* 51.96 é sqrt(3)/2 de 60, que é a proporção da altura de um triangulo quanto a seu tamanho */
 @media all and (orientation:portrait) {
 	#nineties-button {
-        bottom: 69.28vw;
+        bottom: 51.96vw;
     }
 
     #zeroes-button {
-        right: 80vw;
-        top: 69.28vw;
+        right: 60vw;
+        top: 51.96vw;
     }
 
 	#tens-button {
-        left: 80vw;
-        top: 69.28vw;
+        left: 60vw;
+        top: 51.96vw;
     }
 }

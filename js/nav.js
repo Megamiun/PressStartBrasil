@@ -43,17 +43,19 @@ function hasScrolled() {
 	const navbarHeight = nav.outerHeight();
 
 	if (st > lastScrollTop && st > navbarHeight){
-		moveNav(-navbarHeight);
+		moveItem(hamburger, -navbarHeight);
+		moveItem(nav, -navbarHeight);
 	} else {
-		moveNav(0);
+		moveItem(hamburger, 0);
+		moveItem(nav, 0);
 	}
 
 	lastScrollTop = st;
 }
 
 /* Moves the superior nav vertically */
-function moveNav(newTop) {
-	nav.animate({top: newTop}, 175, function() {
+function moveItem(item, newTop) {
+	item.animate({top: newTop}, 175, function() {
 		moving = false;
 	});
 }

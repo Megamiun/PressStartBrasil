@@ -5,15 +5,52 @@
 	    <title>Contato</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="stylesheets/hamburgers.css" rel="stylesheet" />
 		<link href="stylesheets/fonts.css" rel="stylesheet" />
 	    <link href="stylesheets/main.css" rel="stylesheet" />
 	    <link href="stylesheets/nav.css" rel="stylesheet" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" defer></script>
+		<script src="js/nav.js" defer></script>
 	</head>
 	<body>
+		<button id="nav-burger" class="hamburger hamburger--vortex layer-10"
+		type="button" onclick="toggleSidebar()">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+
 		<nav id="top-bar" class="horizontal layer-8" >
 			<div>
-				<a href="index.html">Home</a>
 				<a href="sobre.html">Sobre</a>
+				<a href="contato.html">Contato</a>
+			</div>
+		</nav>
+
+		<nav id="side-bar" class="vertical layer-9" >
+			<div>
+				<a href="#editorial">Editorial</a>
+			</div>
+			<div>
+				<a href="90s.html">Anos 90: Os Primeiros Passos do Jornalismo de Games no Brasil</a>
+				<a href="90s.html#a-kids-dream">O Sonho de Qualquer Moleque</a>
+				<a href="90s.html#player-2-player">De Jogador Para Jogador</a>
+				<a href="90s.html#point-of-view">O Outro Ponto de Vista</a>
+			</div>
+			<div>
+				<a href="00s.html">Anos 2000: Nintendo World, EGM e o início do fim do declínio das publicações impressas</a>
+				<a href="00s.html#to-heroes">De Zero a Herói</a>
+				<a href="00s.html#whole-new-world"> A Whole New World</a>
+				<a href="00s.html#brazillian-ways" >O Jeitinho Brasileiro</a>
+			</div>
+			<div>
+				<a href="10s.html">Anos 2010: Os paradigmas atuais do jornalismo de games impresso e digital</a>
+                <a href="10s.html#and-the-print" >E as publicações impressas?</a>
+                <a href="10s.html#its-fan-time" >A Hora dos Fãs</a>
+                <a href="10s.html#veteran-eyes" >O Olhar dos Veteranos</a>
+                <a href="10s.html#seal-of-quality" >Pensando Grande/Seal of Quality</a>
+                <a href="10s.html#like-a-good-friend" >A Diferença / Como um Bom Amigo</a>
 			</div>
 		</nav>
 		<div class="contact" >

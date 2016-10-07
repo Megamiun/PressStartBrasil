@@ -19,14 +19,15 @@
 		<script src="js/nav.js" defer></script>
 	</head>
 	<body>
-		<nav id="top-bar" class="horizontal layer-10" >
+		<button id="nav-burger" class="hamburger hamburger--vortex layer-10"
+		type="button" onclick="toggleSidebar()">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+
+		<nav id="top-bar" class="horizontal layer-8" >
 			<div>
-				<button id="nav-burger" class="hamburger hamburger--vortex"
-					type="button" onclick="toggleSidebar()">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button>
 				<a href="sobre.html">Sobre</a>
 				<a href="contato.html">Contato</a>
 			</div>
@@ -120,8 +121,25 @@
 				<p>A quantidade de páginas também diminuíram com edições que ultrapassavam as 100 páginas, agora não chegando a 85. E um dos fatores que definiram essa diminuição de páginas foi a quantidade de publicidades nela. Usando de modelo a edição 174 da EGW e a 199 da Nintendo World. Os jornalistas não são mais identificados em imagens, muito pelo contrário, há apenas seus nomes escritos nas matérias de ambas as publicações. Os preços aumentaram com o custo do papel e a necessidade de se manter no mercado com a queda de vendas. A Revista Oficial Playstation passou de R$6,90 nos anos 2007 para o preço atual de R$ 13,90. A EGW também teve que aumentar, de utópicos R$6,50 das suas primeiras edições, passando para R$9,90 em 2008 e atualmente custando R$14,90, a revista se tornou uma das mais caras do mercado. Enquanto a sua companheira Nintendo World tem um custo mais aprazível, mas que ainda sim dobrou nos últimos 10 anos. De R$6,90, aumentou para R$ 12,90.</p>
 			</article>
 		</section>
-		<section class="image" ><img src="img/EGW-actual.jpeg" /></section>
-        <section class="image" ><img src="img/Nintendo_World_Atual.jpg" /></section>
+
+		<section>
+			<article id="egw-carousel" class="carousel-container">
+				<article class="slide">
+					<img src="img/Nintendo_World_Atual.jpg" />
+				</article>
+				<article class="slide">
+					<img src="img/EGW-actual.jpeg" />
+				</article>
+
+				<a class="prev" onclick="previous('egw-carousel')">&#10094;</a>
+				<a class="next" onclick="next('egw-carousel')">&#10095;</a>
+
+				<div class="dot-container">
+					<span class="dot" onclick="showSlide('egw-carousel', 0)"></span>
+					<span class="dot" onclick="showSlide('egw-carousel', 1)"></span>
+				</div>
+			</article>
+		</section>
 		<section class="textual" >
 			<article>
                 <p>Mas não é como se as revistas não tivessem mais relevância para o público. O sinal de que talvez as publicações impressas ainda estejam longe de terminar vêm do feedback que algumas bancas recebem de seu público consumidor, Gerson, dono de uma banca localizada no Centro de São Paulo, no bairro de Higienópolis, diz que a maioria do publico, com todas idades, compram muito mais quadrinhos e revistas de entretenimento do que seus outros produtos. O seu maior trunfo foi ter investido nessa área. "Uma vez eu vendi todas as 15 revistas Pockets de guia de games da banca, achei que tinha sido roubado a principio, mas depois fui ver no registro e descobri que na verdade todas tinham sido vendidas"</p>
