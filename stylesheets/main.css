@@ -28,6 +28,10 @@ h1 {
 	margin-bottom: 0px;
 }
 
+a > em {
+	display: inline-block;
+}
+
 footer {
 	background-color: black;
 	text-align: center;

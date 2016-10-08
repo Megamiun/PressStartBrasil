@@ -31,10 +31,6 @@ nav.vertical {
 	top: 0;
 }
 
-nav.vertical * {
-	display: block;
-}
-
 nav.vertical div {
 	border-bottom: 1px solid black;
 	display: block;
@@ -42,6 +38,7 @@ nav.vertical div {
 
 nav.vertical div a {
 	margin: 2.5vh 0;
+	display: block;
 }
 
 nav.vertical div > :first-child {
