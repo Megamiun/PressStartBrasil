@@ -38,7 +38,6 @@ footer {
 section {
 	display: block;
 	margin: 10vmin 0;
-	overflow: hidden;
 	min-height: 100vh;
 	max-height: 100vh;
 	text-align: center;
@@ -61,12 +60,33 @@ section.textual article {
 	width: 55vw;
 }
 
-section.image, .carousel-container > .slide.active {
+section.image, section.carousel {
+	max-height: none;
+	display: block;
+	line-height: 0;
+}
+
+section.image > *, section.carousel > * {
+	display: block;
+}
+
+section.image > article, section.carousel > article {
     justify-content: center;
 	align-items: center;
 	position: relative;
-    display: flex;
+	display: inline-flex;
+	overflow: hidden;
 	height: 100vh;
+	width: 100%;
+}
+
+section.image p, section.carousel p {
+	background-color: black;
+	line-height: 1.5;
+	padding: 3vmin 0;
+	font-size: 15px;
+	color: white;
+	margin: 0;
 }
 
 .title-holder {
@@ -112,10 +132,6 @@ section.image, .carousel-container > .slide.active {
 	z-index: 1;
 }
 
-.left-aligned {
-	text-align: left;
-}
-
 #logo {
 	max-height: 60vh;
 	padding-top: 10vh;
@@ -148,14 +164,7 @@ section.image, .carousel-container > .slide.active {
 @media all and (min-aspect-ratio:16/9) {
 	img, video {
 		height: auto;
-		width: 100vw;
-	}
-}
-
-@media all and (max-aspect-ratio:16/9) {
-	img, video {
-		height: 100vh;
-		width: auto;
+		width: 100%;
 	}
 }
 

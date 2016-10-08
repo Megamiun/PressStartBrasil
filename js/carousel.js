@@ -1,4 +1,4 @@
-var carousels = document.getElementsByClassName("carousel-container");
+var carousels = document.getElementsByClassName("carousel");
 var carouselsMap = new Object();
 var slideIndex = new Object();
 
