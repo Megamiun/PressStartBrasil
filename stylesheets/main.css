@@ -41,6 +41,7 @@ footer {
 
 section {
 	display: block;
+    overflow: hidden;
 	margin: 10vmin 0;
 	min-height: 100vh;
 	max-height: 100vh;
@@ -66,7 +67,6 @@ section.textual article {
 
 section.image, section.carousel {
 	max-height: none;
-	display: block;
 	line-height: 0;
 }
 
@@ -79,7 +79,6 @@ section.image > article, section.carousel > article {
 	align-items: center;
 	position: relative;
 	display: inline-flex;
-	overflow: hidden;
 	height: 100vh;
 	width: 100%;
 }
@@ -95,7 +94,6 @@ section.image p, section.carousel p {
 
 .title-holder {
 	margin: 0;
-	overflow: hidden;
 	text-align: center;
 }
 
