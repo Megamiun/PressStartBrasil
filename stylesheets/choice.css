@@ -1,7 +1,6 @@
 #nineties-button, #zeroes-button, #tens-button {
-    /* TODO Definir melhor os tamanhos */
-    height: 100px;
-    width: 100px;
+    height: 15vmin;
+    width: auto;
 }
 
 #nineties-button img, #zeroes-button img, #tens-button img {
@@ -16,10 +15,6 @@
     width: auto;
     bottom: 5vh;
     top: auto;
-}
-
-#choice-menu {
-    margin: 0;
 }
 
 /* 43.30 é sqrt(3)/2 de 50, que é a proporção da altura de um triangulo quanto a seu tamanho */

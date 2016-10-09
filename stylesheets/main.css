@@ -163,6 +163,17 @@ section.image p, section.carousel p {
 	max-width: 80vw;
 }
 
+.last-section {
+	margin: 0;
+}
+
+img.content {
+	width: auto;
+	height: auto;
+	max-width: 80%;
+	max-height: 70vh;
+}
+
 @media all and (min-aspect-ratio:16/9) {
 	img, video {
 		height: auto;
@@ -174,6 +185,25 @@ section.image p, section.carousel p {
 	img, video {
 		height: 100vh;
 		width: auto;
+	}
+
+	img.background {
+		max-width: none;
+		height: 100vh;
+		width: auto;
+	}
+}
+
+@media all and (min-aspect-ratio:16/9) {
+	img, video {
+		height: auto;
+		width: 100%;
+	}
+
+	img.background {
+		max-height: none;
+		height: auto;
+		width: 100%;
 	}
 }
 
