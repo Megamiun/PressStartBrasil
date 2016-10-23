@@ -78,6 +78,7 @@ section.image > article, section.carousel > article {
 	align-items: center;
 	position: relative;
 	display: inline-flex;
+	overflow: hidden;
 	height: 100vh;
 	width: 100%;
 }
@@ -166,11 +167,16 @@ section.image p, section.carousel p {
 	margin: 0;
 }
 
-img.content {
+article.layered img.background {
+	z-index: 1;
+}
+
+article.layered img.content {
+	z-index: 2;
 	width: auto;
 	height: auto;
-	max-width: 80%;
-	max-height: 70vh;
+	max-width: 80vw;
+	max-height: 80vh;
 }
 
 @media all and (min-aspect-ratio:16/9) {
@@ -186,7 +192,7 @@ img.content {
 		width: auto;
 	}
 
-	img.background {
+	article.layered img.background {
 		max-width: none;
 		height: 100vh;
 		width: auto;
@@ -199,7 +205,7 @@ img.content {
 		width: 100%;
 	}
 
-	img.background {
+	article.layered img.background {
 		max-height: none;
 		height: auto;
 		width: 100%;
