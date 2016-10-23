@@ -1,5 +1,5 @@
 nav {
-	font-family: 'Bebas Neue';
+	font-family: 'Bebas Neue Regular';
 	background-color: white;
 	position: fixed;
 	z-index: 10;
@@ -20,16 +20,15 @@ nav.horizontal {
 }
 
 nav.horizontal a {
-	font-family: 'Bebas Neue Regular';
 	margin: 0 1.5vw;
-	font-weight: normal;
 }
 
 nav.vertical {
 	overflow-x: scroll;
-	padding-top: 50px;
-	height: 100vh;
+	padding-top: 70px;
 	width: 22vw;
+	bottom: 0;
+	top: 0;
 }
 
 nav.vertical * {
@@ -42,13 +41,12 @@ nav.vertical div {
 }
 
 nav.vertical div a {
-	font-weight: lighter;
-	margin: 2vh 0;
+	margin: 2.5vh 0;
 }
 
 nav.vertical div > :first-child {
-	font-family: 'Bebas Neue Regular';
-	font-weight: normal;
+	font-family: 'Bebas Neue';
+	font-weight: bold;
 	display: block;
 }
 
@@ -62,9 +60,25 @@ nav.vertical div > :first-child {
 }
 
 #nav-burger .hamburger-box {
-	height: 100%;
+	width: 30px;
+	height: 40px;
 }
 
 #nav-burger .hamburger-inner {
 	transition-duration: 0.3s;
+}
+
+#nav-burger .hamburger-inner,
+#nav-burger .hamburger-inner::before,
+#nav-burger .hamburger-inner::after {
+	height: 3px;
+	width: 100%;
+}
+
+#nav-burger:not(.is-active) .hamburger-inner::before {
+	top: -7px;
+}
+
+#nav-burger:not(.is-active) .hamburger-inner::after {
+	bottom: -7px;
 }

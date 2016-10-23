@@ -12,17 +12,12 @@
 
 body {
 	margin: 0;
-	font-family: 'DejaVu Sans';
+	font-family: 'Roboto';
 	font-size: 18px;
 }
 
-* {
+:not(img):not(video) {
 	max-width: 100%;
-}
-
-img {
-	display: block;
-	margin: auto;
 }
 
 h1 {
@@ -31,13 +26,6 @@ h1 {
 	font-weight: bold;
 	font-size: 48px;
 	margin-bottom: 0px;
-}
-
-h2 {
-	text-align: center;
-	font-family: 'Bebas Neue';
-	font-weight: bold;
-	font-size: 24px;
 }
 
 footer {
@@ -50,29 +38,39 @@ footer {
 section {
 	display: block;
 	margin: 10vh 0;
+	overflow: hidden;
+	min-height: 100vh;
+	max-height: 100vh;
 	text-align: center;
 	background-color: white;
+}
+
+section.textual, section.textual *, section.videoWrapper {
+	min-height: 0;
+	max-height: none;
 }
 
 section article {
 	display: inline-block;
 	text-align: justify;
-	line-height: 1.5;
-	margin: 5vh 0;
-	width: 50vw;
 }
 
-section article > img {
-	max-height: 100vh;
-	max-width: 50vw;
-	margin: 15vh auto;
-	height: auto;
-	width: auto;
+section.textual article {
+	line-height: 1.5;
+	margin: 4vh 0;
+	width: 55vw;
+}
+
+section.image, .carousel-container > .slide.active {
+    justify-content: center;
+	align-items: center;
+	position: relative;
+    display: flex;
+	height: 100vh;
 }
 
 .title-holder {
 	margin: 0;
-	height: 100vh;
 	overflow: hidden;
 	text-align: center;
 }
@@ -86,9 +84,11 @@ section article > img {
 }
 
 .layered > * {
+	top: 0;
 	left: 0;
 	right: 0;
-	margin: 0;
+	bottom: 0;
+	margin: auto;
 	position: absolute;
 }
 
@@ -134,6 +134,23 @@ section article > img {
 }
 
 #info img {
-	max-width: 80vw;
+	width: auto;
+	height: auto;
 	margin: auto;
+	display: block;
+	max-width: 80vw;
+}
+
+@media all and (min-aspect-ratio:16/9) {
+	img, video {
+		height: auto;
+		width: 100vw;
+	}
+}
+
+@media all and (max-aspect-ratio:16/9) {
+	img, video {
+		height: 100vh;
+		width: auto;
+	}
 }

@@ -1,0 +1,52 @@
+#nineties-button, #zeroes-button, #tens-button {
+    /* TODO Definir melhor os tamanhos */
+    height: 100px;
+    width: 100px;
+}
+
+#choose-your-destiny {
+    max-height: 10%;
+    max-width: 80%;
+    height: auto;
+    width: auto;
+    bottom: 5vh;
+    top: auto;
+}
+
+#choice-menu {
+    margin: 0;
+}
+
+/* 43.30 é sqrt(3)/2 de 50, que é a proporção da altura de um triangulo quanto a seu tamanho */
+@media all and (orientation:landscape) {
+	#nineties-button {
+        bottom: 56.30vh;
+    }
+
+    #zeroes-button {
+        right: 50vh;
+        top: 30.30vh;
+    }
+
+	#tens-button {
+        left: 50vh;
+        top: 30.30vh;
+    }
+}
+
+/* 69.28 é sqrt(3)/2 de 80, que é a proporção da altura de um triangulo quanto a seu tamanho */
+@media all and (orientation:portrait) {
+	#nineties-button {
+        bottom: 69.28vw;
+    }
+
+    #zeroes-button {
+        right: 80vw;
+        top: 69.28vw;
+    }
+
+	#tens-button {
+        left: 80vw;
+        top: 69.28vw;
+    }
+}
