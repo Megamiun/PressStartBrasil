@@ -4,8 +4,8 @@ Projeto de TCC de Rodrigo Ribeiro, retratando a história do cenário do jornali
 
 ## Autores
 
-* **Gabryel Monteiro** - Estrutura e funcionamento do site - [Megamiun](https://github.com/Megamiun)
-* **Lucas Medeiros** - Arte e design do site.
+* **Gabryel Monteiro** - Estrutura e funcionamento do site - [Megamiun](https://github.com/Megamiun).
+* **Lucas Medeiros** - Arte e design do site - [Zx-3k10](https://github.com/Zx-3k10).
 * **Rodrigo Ribeiro** - Contéudo do site.
 
 ## Créditos

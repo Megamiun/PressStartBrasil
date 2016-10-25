@@ -6,7 +6,7 @@ nav {
 }
 
 nav div {
-	margin: 3vh 2vw;
+	margin: 3vmin 2vw;
 }
 
 nav a {
@@ -26,13 +26,9 @@ nav.horizontal a {
 nav.vertical {
 	overflow-x: scroll;
 	padding-top: 70px;
-	width: 22vw;
+	width: 20em;
 	bottom: 0;
 	top: 0;
-}
-
-nav.vertical * {
-	display: block;
 }
 
 nav.vertical div {
@@ -42,6 +38,7 @@ nav.vertical div {
 
 nav.vertical div a {
 	margin: 2.5vh 0;
+	display: block;
 }
 
 nav.vertical div > :first-child {
@@ -51,17 +48,17 @@ nav.vertical div > :first-child {
 }
 
 #nav-burger {
-	position: absolute;
-	height: 100%;
-	padding: 0;
-	margin: 0;
+	position: fixed;
+	padding: 0px;
+	height: 18px + 6vmin;
 	left: 2vw;
 	top: 0;
 }
 
 #nav-burger .hamburger-box {
 	width: 30px;
-	height: 40px;
+	height: 18px;
+	margin: 3vmin 0;
 }
 
 #nav-burger .hamburger-inner {
@@ -81,4 +78,10 @@ nav.vertical div > :first-child {
 
 #nav-burger:not(.is-active) .hamburger-inner::after {
 	bottom: -7px;
+}
+
+@media all and (max-width:20em) {
+	nav.vertical {
+		width: 100vw;
+	}
 }

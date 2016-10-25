@@ -1,42 +1,45 @@
-var carousels = document.getElementsByClassName("carousel-container");
+var carousels = document.getElementsByClassName("carousel");
+var carouselsMap = new Object();
+var slideIndex = new Object();
 
 for (var index = 0; index < carousels.length; index++) {
-	showSlides(carousels[index], 0);
+	carouselsMap[carousels[index].id] = carousels[index];
+	slideIndex[carousels[index].id] = 0;
+	showSlide(carousels[index].id, 0);
 }
 
-function next(carouselId, n) {
-	var carousel = getCarousel(carouselId);
-	showSlides(carousel, carousel.getAttribute('slideIndex') + 1);
+function next(carouselId) {
+	showSlide(carouselId, slideIndex[carouselId] + 1);
 }
 
-function previous(carouselId, n) {
-	var carousel = getCarousel(carouselId);
-	showSlides(carousel, carousel.getAttribute('slideIndex') - 1);
+function previous(carouselId) {
+	showSlide(carouselId, slideIndex[carouselId] - 1);
 }
 
 function showSlide(carouselId, n) {
-	showSlides(getCarousel(carouselId), n);
-}
-
-function showSlides(carousel, n) {
+	var carousel = carouselsMap[carouselId];
 	var slides = carousel.getElementsByClassName("slide");
 	var dots = carousel.getElementsByClassName("dot");
 
-	slideIndex = mod(n, slides.length);
-	for (var i = 0; i < slides.length; i++) {
-        slides[i].className = slides[i].className.replace(" active", "");
-        dots[i].className = dots[i].className.replace(" active", "");
-	}
+	var newSlideIndex = mod(n, slides.length);
+	var oldSlideIndex = slideIndex[carouselId];
 
-	carousel.setAttribute("slideIndex", slideIndex);
-	slides[slideIndex].className += " active";
-	dots[slideIndex].className += " active";
+	// Remove active from old slide
+	removeActive(slides[oldSlideIndex]);
+	removeActive(dots[oldSlideIndex]);
+
+	// Add active to new slide
+	slides[newSlideIndex].className += " active";
+	dots[newSlideIndex].className += " active";
+
+	// Replace slideIndex
+	slideIndex[carouselId] = newSlideIndex;
 }
 
 function mod(dividend, divisor) {
 	return ((dividend % divisor) + divisor) % divisor;
 }
 
-function getCarousel(carouselId) {
-	return document.getElementById(carouselId);
+function removeActive(item){
+	item.className = item.className.replace("active", "");
 }

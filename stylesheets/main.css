@@ -25,7 +25,10 @@ h1 {
 	font-family: 'Bebas Neue';
 	font-weight: bold;
 	font-size: 48px;
-	margin-bottom: 0px;
+}
+
+a > em {
+	display: inline-block;
 }
 
 footer {
@@ -37,8 +40,8 @@ footer {
 
 section {
 	display: block;
-	margin: 10vh 0;
-	overflow: hidden;
+    overflow: hidden;
+	margin: 10vmin 0;
 	min-height: 100vh;
 	max-height: 100vh;
 	text-align: center;
@@ -57,21 +60,40 @@ section article {
 
 section.textual article {
 	line-height: 1.5;
-	margin: 4vh 0;
+	margin: 0;
 	width: 55vw;
 }
 
-section.image, .carousel-container > .slide.active {
+section.image, section.carousel {
+	max-height: none;
+	line-height: 0;
+}
+
+section.image > *, section.carousel > * {
+	display: block;
+}
+
+section.image > article, section.carousel > article {
     justify-content: center;
 	align-items: center;
 	position: relative;
-    display: flex;
+	display: inline-flex;
+	overflow: hidden;
 	height: 100vh;
+	width: 100%;
+}
+
+section.image p, section.carousel p {
+	background-color: black;
+	line-height: 1.5;
+	padding: 3vmin 0;
+	font-size: 15px;
+	color: white;
+	margin: 0;
 }
 
 .title-holder {
 	margin: 0;
-	overflow: hidden;
 	text-align: center;
 }
 
@@ -100,16 +122,16 @@ section.image, .carousel-container > .slide.active {
 	z-index: 9;
 }
 
+.layer-8 {
+	z-index: 8;
+}
+
 .layer-2 {
 	z-index: 2;
 }
 
 .layer-1 {
 	z-index: 1;
-}
-
-.left-aligned {
-	text-align: left;
 }
 
 #logo {
@@ -141,10 +163,26 @@ section.image, .carousel-container > .slide.active {
 	max-width: 80vw;
 }
 
+.last-section {
+	margin: 0;
+}
+
+article.layered img.background {
+	z-index: 1;
+}
+
+article.layered img.content {
+	z-index: 2;
+	width: auto;
+	height: auto;
+	max-width: 80vw;
+	max-height: 80vh;
+}
+
 @media all and (min-aspect-ratio:16/9) {
 	img, video {
 		height: auto;
-		width: 100vw;
+		width: 100%;
 	}
 }
 
@@ -152,5 +190,31 @@ section.image, .carousel-container > .slide.active {
 	img, video {
 		height: 100vh;
 		width: auto;
+	}
+
+	article.layered img.background {
+		max-width: none;
+		height: 100vh;
+		width: auto;
+	}
+}
+
+@media all and (min-aspect-ratio:16/9) {
+	img, video {
+		height: auto;
+		width: 100%;
+	}
+
+	article.layered img.background {
+		max-height: none;
+		height: auto;
+		width: 100%;
+	}
+}
+
+@media all and (max-width:40em) {
+	section.textual article {
+		max-width: 80vw;
+		width: 20em;
 	}
 }
