@@ -65,6 +65,7 @@ section.textual article {
 }
 
 section.image, section.carousel {
+	margin: 10vmin 0 0 0;
 	max-height: none;
 	line-height: 0;
 }
@@ -81,6 +82,39 @@ section.image > article, section.carousel > article {
 	overflow: hidden;
 	height: 100vh;
 	width: 100%;
+}
+
+section.image:not(.title-holder) > article:before,
+section.image:not(.title-holder) > article:after,
+section.carousel > article:before,
+section.carousel > article:after {
+	background-repeat: repeat-x;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	content: "";
+	z-index: 3;
+}
+
+section.image:not(.title-holder) > article:before,
+section.carousel > article:before {
+	background-image: url(../img/image_header.png);
+	top: 0;
+}
+
+section.image:not(.title-holder) > article:after,
+section.carousel > article:after {
+	background-image: url(../img/image_footer.png);
+	bottom: 0;
+}
+
+section.image:not(.title-holder):after,
+section.carousel:after {
+	background-image: url(../img/subtitle_footer.png);
+	background-repeat: repeat-x;
+	display: block;
+	height: 10vmin;
+	content: "";
 }
 
 section.full-width {
@@ -112,9 +146,9 @@ section.image p, section.carousel p {
 	margin: 0;
 }
 
-.title-holder {
-	margin: 0;
+section.title-holder {
 	text-align: center;
+	margin: 0;
 }
 
 .contact {
