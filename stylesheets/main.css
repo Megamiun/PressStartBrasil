@@ -95,6 +95,14 @@ section.carousel.full-width > article > img {
 	width: 100%;
 }
 
+section.image.sub-screen > article,
+section.carousel.sub-screen > article,
+section.image.sub-screen > article > img,
+section.carousel.sub-screen > article > img {
+	max-height: 100vh;
+	max-width: : 100%;
+}
+
 section.image p, section.carousel p {
 	background-color: black;
 	line-height: 1.5;

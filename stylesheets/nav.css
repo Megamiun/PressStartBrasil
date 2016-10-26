@@ -23,6 +23,14 @@ nav.horizontal a {
 	margin: 0 1.5vw;
 }
 
+nav.horizontal h2 {
+	position: absolute;
+	display: inline;
+	line-height: 1;
+    left: 8vmax;
+    margin: 0;
+}
+
 nav.vertical {
 	overflow-x: scroll;
 	padding-top: 70px;
@@ -49,8 +57,7 @@ nav.vertical div > :first-child {
 
 #nav-burger {
 	position: fixed;
-	padding: 0px;
-	height: 18px + 6vmin;
+	padding: 0;
 	left: 2vw;
 	top: 0;
 }
