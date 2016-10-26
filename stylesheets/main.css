@@ -83,6 +83,18 @@ section.image > article, section.carousel > article {
 	width: 100%;
 }
 
+section.full-width {
+	min-height: 0;
+}
+
+section.image.full-width > article,
+section.carousel.full-width > article,
+section.image.full-width > article > img,
+section.carousel.full-width > article > img {
+	height: auto;
+	width: 100%;
+}
+
 section.image p, section.carousel p {
 	background-color: black;
 	line-height: 1.5;
@@ -105,7 +117,7 @@ section.image p, section.carousel p {
 	position: relative;
 }
 
-.layered > * {
+.layered > *:not(.background) {
 	top: 0;
 	left: 0;
 	right: 0;
