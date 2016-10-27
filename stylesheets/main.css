@@ -140,11 +140,16 @@ section.carousel.sub-screen > article > img {
 
 section.image p, section.carousel p {
 	background-color: black;
+	text-decoration: none;
 	line-height: 1.5;
 	padding: 3vmin 0;
 	font-size: 15px;
 	color: white;
 	margin: 0;
+}
+
+section.image p a, section.carousel p a {
+	color: white;
 }
 
 section.title-holder {
