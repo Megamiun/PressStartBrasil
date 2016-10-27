@@ -19,6 +19,10 @@ nav.horizontal {
 	width: 100%;
 }
 
+nav.horizontal div {
+	height: 27px;
+}
+
 nav.horizontal a {
 	margin: 0 1.5vw;
 }
