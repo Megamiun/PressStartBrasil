@@ -90,7 +90,7 @@ section.carousel > article:before,
 section.carousel > article:after {
 	background-repeat: repeat-x;
 	position: absolute;
-	height: 100%;
+	height: 10%;
 	width: 100%;
 	content: "";
 	z-index: 3;
@@ -101,12 +101,13 @@ section.carousel > article:before {
 	background-image: url(../img/image_header.png);
 	top: 0;
 }
-
+/** TODO Arrumar isso
 section.image:not(.title-holder) > article:after,
 section.carousel > article:after {
 	background-image: url(../img/image_footer.png);
 	bottom: 0;
 }
+*/
 
 section.image:not(.title-holder):after,
 section.carousel:after {
