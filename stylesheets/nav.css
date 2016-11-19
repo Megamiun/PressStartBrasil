@@ -23,6 +23,11 @@ nav.horizontal a {
 	margin: 0 1.5vw;
 }
 
+/* Manter enquanto nao houver Contatos*/
+nav.horizontal div {
+	height: 27px;
+}
+
 nav.horizontal h2 {
 	position: absolute;
 	display: inline;
