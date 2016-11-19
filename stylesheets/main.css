@@ -29,6 +29,7 @@ h1 {
 
 a > em {
 	display: inline-block;
+	margin: 0 3px 0 0;
 }
 
 footer {
@@ -99,6 +100,7 @@ section.carousel > article:after {
 section.image:not(.title-holder) > article:before,
 section.carousel > article:before {
 	background-image: url(../img/image_header.png);
+	right: 0;
 	top: 0;
 }
 /** TODO Arrumar isso
